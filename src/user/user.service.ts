@@ -6,7 +6,7 @@ import {
 import { UpdateUserDto } from "./dto/update-user.dto";
 import { Repository } from "typeorm";
 import { InjectRepository } from "@nestjs/typeorm";
-import { User } from "src/entity/user.entity";
+import { User } from "../entity/user.entity";
 import { ConfigService } from "@nestjs/config";
 import { CreateUserDto } from "./dto/create-user.dto";
 
