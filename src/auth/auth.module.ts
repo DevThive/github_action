@@ -6,9 +6,10 @@ import { accessTokenGuard } from "./guard/access-token.guard";
 import { accessTokenStrategy } from "./strategy/access-token.strategy";
 import { refreshTokenGuard } from "./guard/refresh-token.guard";
 import { refreshTokenStrategy } from "./strategy/refresh-token.strategy";
+import { JwtModule } from "@nestjs/jwt";
 
 @Module({
-    imports: [forwardRef(() => UserModule)],
+    imports: [forwardRef(() => UserModule), JwtModule],
     exports: [
         accessTokenGuard,
         accessTokenStrategy,
