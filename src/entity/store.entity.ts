@@ -1,10 +1,16 @@
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, Relation } from "typeorm";
+import {
+    Column,
+    Entity,
+    ManyToOne,
+    PrimaryGeneratedColumn,
+    Relation,
+} from "typeorm";
 import { User } from "./user.entity";
 
 @Entity({
     name: "store",
 })
-export class Store{
+export class Store {
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -13,7 +19,7 @@ export class Store{
 
     @Column()
     store_name: string;
-    
+
     @Column()
     store_desc: string;
 
@@ -34,5 +40,4 @@ export class Store{
 
     @Column()
     store_close: Date;
-
 }

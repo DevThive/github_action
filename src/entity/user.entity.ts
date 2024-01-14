@@ -35,13 +35,11 @@ export class User {
     @Column()
     age: string;
 
-    @Column({ type: 'enum', enum: Role, default: Role.User })
+    @Column({ type: "enum", enum: Role, default: Role.User })
     role: Role;
 
-    @OneToMany(() => Store, (store) => store.admin,{cascade: true})
+    @OneToMany(() => Store, (store) => store.admin, { cascade: true })
     store: Relation<Store>[];
-
-    
 
     @CreateDateColumn()
     createdAt: Date;

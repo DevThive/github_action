@@ -6,7 +6,7 @@ import { AuthModule } from "./auth/auth.module";
 import { ConfigModule, ConfigService } from "@nestjs/config";
 import { ConfigProjectModule } from "./config/config.module";
 import { TypeormModule } from "./typeorm/typeorm.module";
-import { StoreModule } from './store/store.module';
+import { StoreModule } from "./store/store.module";
 
 @Module({
     imports: [

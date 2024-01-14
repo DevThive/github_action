@@ -45,10 +45,11 @@ export class UserService {
         });
     }
 
-    async findUserByIdWithBoards(id: number) {
+    async findUserByIdWithStore(id: number) {
         return await this.userRepository.findOne({
             where: { id },
             select: ["id", "email", "name", "createdAt", "updatedAt"],
+            relations: { store: true },
         });
     }
 
